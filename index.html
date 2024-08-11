@@ -1,3 +1,4 @@
+<!-- Awalan -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,37 +10,38 @@
     <body>
 
         <!-- HEADER -->
-        <header>
-            <h1 class="main-title">Kalkulator BMI</h1>
+        <!-- Judul Awal Sebuah BMI Perhitungan -->
+        <header id="titleOpA">
+            <hr>
+            <h1 id="titleHead">>> BMI <<</h1>
+            <p id="pLows">[ Perhitungan Massa Index Tubuh ]</p>
+            <hr>
         </header>
+        <nav id="navFunction">
+            <a href="#">HOME</a>
+            <a href="#">KALKULATOR BMI</a>
+            <a href="#">KESIMPULAN</a>
+            <button id="buttonDarkLightToggle">MODE CAHAYA</button>
+        </nav>
         <!-- HEADER END -->
 
         <!-- CONTENTS -->
+        <!-- Isi Pada Sebuah BMI Perhitungan (Setelah Header) -->
         <main>
-            <aside> 
+            <aside>
                 <article>
-                    <p>Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's
-                        standard dummy text ever since the 1500s, when an
-                        unknown
-                        printer took a galley of type and scrambled it to make a
-                        type
-                        specimen book. It has survived not only five centuries,
-                        but also
-                        the leap into electronic typesetting, remaining
-                        essentially
-                        unchanged. It was popularised in the 1960s with the
-                        release of
-                        Letraset sheets containing Lorem Ipsum passages, and
-                        more
-                        recently with desktop publishing software like Aldus
-                        PageMaker
-                        including versions of Lorem Ipsum</p>
+                    <h4 style="font-weight: 600; margin-bottom: 5px;">KALKULATOR BMI</h4>
+                    <p>Berat badan ideal adalah impian semua orang. Tidak hanya
+                        memiliki bentuk tubuh yang menunjang penampilan, berat
+                        badan ideal juga menandakan kondisi tubuh yang sehat.
+                        Bagaimana denganmu?..<br> Yuk, hitung sekarang di
+                        kalkulator BMI.</p>
+                        <hr>
                 </article>
-
+                <br>
+                <!-- Form Sebagai Perhitungan BMI -->
                 <form>
-                    <div>
+                    <div id="formWrapRadio">
                         <h3>Jenis Kelamin</h3>
                         <input type="radio" id="Jenis-Kelamin"
                             name="jenis-kelamin"
@@ -52,71 +54,95 @@
                     </div>
 
                     <div>
-                        <h3>Berat Badan</h3>
-                        <input type="number">
+                        <h4 id="h4BMI">Berat Badan (kg)</h4>
+                        <input type="number" required>
                     </div>
 
-                    <div class="form-btn-container">
-                        <button class="button bg-cornsilk">Hitung BMI</button>
-                        <button class="button bg-reset">Reset</button>
+                    <div>
+                        <h4 id="h4BMI">Usia (tahun)</h4>
+                        <input type="number" required>
+                    </div>
+
+                    <div>
+                        <h4 id="h4BMI">Tinggi Badan (cm)</h4>
+                        <input type="number" required>
+                    </div>
+
+                    <!-- Tombol Perhitungan BMI -->
+                    <div>
+                        <button id="buttonSubmit">Hitung BMI</button>
+                        <button id="buttonRefresh">Reset</button>
                     </div>
                 </form>
 
                 <article>
-                    <header>
-                        <h2>Form Information</h2>
-                    </header>
-                    <p>Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's
-                        standard dummy text ever since the 1500s, when an
-                        unknown
-                        printer took a galley of type and scrambled it to make a
-                        type
-                        specimen book. It has survived not only five centuries,
-                        but also
-                        the leap into electronic typesetting, remaining
-                        essentially
-                        unchanged. It was popularised in the 1960s with the
-                        release of
-                        Letraset sheets containing Lorem Ipsum passages, and
-                        more
-                        recently with desktop publishing software like Aldus
-                        PageMaker
-                        including versions of Lorem Ipsum</p>
+                    <!-- <ul>
+                        <header>
+                            <h2>Keunggulan Fitur:</h2>
+                        </header>
+                        <li>Menghitung Berat Badan</li>
+                        <li>Menentukan kategori berat badan ideal atau
+                            tidak</li>
+                        <li>Mempersiapkan program penurunan berat badan</li>
+                    </ul> -->
+                    <br>
+                    <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa
+                        (Wanita hamil atau menyusui tidak boleh mengandalkan
+                        pembacaan BMI ini) dan tidak ada tindakan yang harus
+                        diambil berdasarkan nilainya selain berkonsultasi dengan
+                        orang yang memenuhi syarat spserti dokter.</p>
+                    <br>
+                    <p>Kalkulator akan memberi Anda gambaran tentang
+                        perbandingan berat badan Anda dengan nilai umum, Indeks
+                        Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda
+                        (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda
+                        (dalam meter) atau BMI = Kg/M2</p>
                 </article>
             </aside>
 
             <aside>
-                <section>Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the
-                    industry's
-                    standard dummy text ever since the 1500s, when an
-                    unknown
-                    printer took a galley of type and scrambled it to make a
-                    type
-                    specimen book. It has survived not only five centuries,
-                    but also
-                    the leap into electronic typesetting, remaining
-                    essentially
-                    unchanged. It was popularised in the 1960s with the
-                    release of
-                    Letraset sheets containing Lorem Ipsum passages, and
-                    more
-                    recently with desktop publishing software like Aldus
-                    PageMaker
-                    including versions of Lorem Ipsum</section>
+                <section>
+                    <h3>Hasil BMI:</h3>
+                    <div>
+                        <h4>Berat Badan Berlebih</h4>
+                        <h1>24.7</h1>
+                        <p>Anda memiliki berat badan berlebih</p>
+                        <button>Download Hasil BMI</button>
+                    </div>
+                    <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                    <button>Registrasi Online Ahli Gizi</button>
+                    <br>
+                    <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari
+                        kesehatan tubuh dan resiko penyakit seseorang. Anda
+                        perlu konsultasi lebih lanjut mengenai resiko dan
+                        kekhawatiran Anda terkait dengan berat badan Anda.</p>
+                </section>
             </aside>
-
-            <section></section>
         </main>
         <!-- CONTENTS END -->
 
         <!-- FOOTER -->
+        <!-- Bagian Bawah Daripada BMI Perhitungan (Setelah Contents) -->
         <footer>
-            <p>Made By Putra</p>
+
         </footer>
         <!-- FOOTER END -->
 
+        <!-- SCRIPT PERHITUNGAN BMI -->
+        <!--<script>
+            function hitungBMI() {
+              const berat = parseFloat(document.getElementById('berat').value);
+              const tinggi = parseFloat(document.getElementById('tinggi').value);
+        
+              if (berat > 0 && tinggi > 0) {
+                const bmi = berat / (tinggi * tinggi);
+                document.getElementById('hasilBMI').textContent = `BMI Anda adalah: ${bmi.toFixed(2)}`;
+              } else {
+                document.getElementById('hasilBMI').textContent = 'Silakan masukkan nilai yang valid.';
+              }
+            }
+        </script> -->
+        <!-- SCRIPT PERHITUNGAN BMI END -->
     </body>
 </html>
+<!-- Akhiran -->
