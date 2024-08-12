@@ -14,6 +14,11 @@ body {
     height: 100vh;
 }
 
+.dark-mode {
+    background-color: rgb(99, 98, 98);
+    opacity: 75%;
+}
+
 /* Style Judul Di-awal BMI */
 #titleHead {
     text-align: center;
@@ -49,6 +54,7 @@ body {
     opacity: 90%;
 }
 
+/* Style Pengatur Tata Letak dan Font */
 nav a {
     position: relative;
     top: 15px;
@@ -60,6 +66,53 @@ nav a {
     text-decoration: none;
     font-size: small;
     color: white;
+}
+
+nav a::after {
+    content: " / ";
+    font-weight: 600;
+    color: white;
+}
+
+nav a:hover {
+    animation-name: buttonNavA;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Style Animasi Hover Pada Tombol Navbar */
+@keyframes buttonNavA {
+    0% {
+        background-color: black;
+        color: white;
+        border-radius: 3px;
+    }
+
+    50% {
+        background-color: beige;
+        color: black;
+        border-radius: 3px;
+    }
+
+    100% {
+        background-color: black;
+        color: white;
+        border-radius: 3px;
+    }
+}
+
+#aNavFirst::before {
+    position: relative;
+    top: -1px;
+    content: " :: ";
+    font-weight: 600;
+    color: white;
+}
+
+#aNavEnd::after {
+    content: "";
 }
 
 /* Tombol Pengatur Cahaya (Dark/Light) */
@@ -213,6 +266,37 @@ form:hover {
     filter: drop-shadow(2px 3px 4px);
 }
 
+/* Tabel Fungsional Dari Keunggulan Kalkulator BMI */
+tr, td {
+    border: 2px solid black;
+    height: 26px;
+    padding: 3px;
+    font-family: Georgia;
+    font-size: 1em;
+    font-weight: 400;
+    font-variant: normal;
+    font-style: normal;
+    color: black;
+    opacity: 90%;
+    border-radius: 3px;
+}
+
+table {
+    margin-top: 17px;
+}
+
+/* Style Animasi Hover Pada Table */
+#dAnimateTable:hover {
+    transition: 120ms ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    height: 35px;
+}
+
+#dCenter {
+    text-align: center;
+}
+
 #jenis-kelamin {
     margin-top: 7px;
 }
@@ -227,11 +311,12 @@ input {
     border: 1px solid gray;
     border-radius: 4px;
     background-color: white;
+    font-family: serif;
 }
 
 /* Style Transisi Input Number Pada Kalkulator BMI */
 input:hover {
-    transition: 250ms ease-out;
+    transition: 120ms ease-out;
     transition-delay: 0s;
     transition-timing-function: linear;
     width: 35%;
@@ -249,6 +334,7 @@ input[type=radio] {
     height: 50%;
 }
 
+/* Style Tombol Submit Perhitungan BMI */
 #buttonSubmit {
     margin-top: 15px;
     margin-left: 12px;
@@ -263,13 +349,14 @@ input[type=radio] {
     cursor: pointer;
 }
 
+/* Style Tombol Refresh Kalkulator BMI */
 #buttonRefresh {
     margin-top: 15px;
     margin-bottom: 10px;
     margin-left: -5px;
     width: 47px;
     height: 31px;
-    background-color: white;
+    background-color: rgb(190, 190, 173);
     border: 1px solid lightgray;
     border-radius: 4px;
     font-family: arial;
@@ -283,76 +370,27 @@ input[type=radio] {
     opacity: 90%;
     color: white;
 }
-/* Akhiran Bagian Styling BMI */
 
-
-
-
-
-
-
-/* body {
-    background-color: white;
-    }
-
-main {
-    display: flex;
+/* Style Paragraf Font Di BMI */
+#pEnd {
+    background-color: beige;
+    color: black;
+    font-family: arial;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 1em;
+    padding: 8px;
     border-radius: 7px;
+    word-spacing: 3px;
+}
+
+#pEnd:hover {
+    transition: 120ms ease-in;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    background-color: black;
+    color: white;
     opacity: 90%;
 }
-
-.main-title {
-    text-align: center;
-}
-
-p {
-    margin: 0;
-}
-
-form {
-    padding: 12px;
-    background-color: aliceblue;
-}
-
-aside {
-    border-radius: 7px;
-    border: 1px solid black;
-    margin: 10px;
-    padding: 48px;
-}
-
-.button {
-    height: 32px;
-    border: none;
-    border-radius: 4px;
-}
-
-.form-btn-container {
-    margin-top: 24px;
-    margin-bottom: 16px;
-}
-
-.bg-cornsilk {
-    background-color: cornsilk;
-}
-
-.bg-reset {
-    background-color: red;
-    color: white;
-}
-
-input[type=number] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: monospace;
-    font-size: 14px;
-}
-
-footer {
-    text-align: center;
-} */
+/* Akhiran Bagian Styling BMI */
