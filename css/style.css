@@ -80,6 +80,9 @@ nav a:hover {
     animation-delay: 0s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    filter: drop-shadow(2px 3px 4px
+    white);
+    text-decoration: underline;
 }
 
 /* Style Animasi Hover Pada Tombol Navbar */
@@ -322,6 +325,38 @@ input:hover {
     width: 35%;
 }
 
+/* Style Gambar(icon) Pen Pada Input BMI */
+#imgPenIcon {
+    position: relative;
+    left: -6px;
+    width: 25px;
+    height: 25px;
+    opacity: 80%;
+    filter: drop-shadow(0 0 3px
+    black);
+    transform: rotate(350deg);
+}
+
+/* Style BMI IMG */
+#imgBMI {
+    position: relative;
+    float: right;
+    top: 25px;
+    right: 110px;
+    width: 160px;
+    height: 160px;
+    opacity: 30%;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+#imgBMI:hover {
+    transition: 200ms ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    opacity: 70%;
+}
+
 #h4BMI {
     margin-left: 11px;
 }
@@ -363,6 +398,32 @@ input[type=radio] {
     cursor: pointer;
 }
 
+/* Style Animasi Pada Img(icon) Reloading */
+#imgReload0 {
+    position: relative;
+    top: 7.5px;
+    left: -6px;
+    opacity: 80%;
+    width: 4%;
+    height: 8%;
+    animation-name: imgAnimateReload;
+    animation-duration: .8s;
+    animation-delay: 1.2s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imgAnimateReload {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
 #buttonSubmit:hover, #buttonRefresh:hover {
     transition: 200ms ease-in-out;
     transition-delay: 0s;
@@ -392,5 +453,266 @@ input[type=radio] {
     background-color: black;
     color: white;
     opacity: 90%;
+}
+
+/* Style Hasil BMI */
+#divWrapHasil {
+    box-sizing: border-box;
+    background-color: lightgray;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    height: 200px;
+    opacity: 90%;
+    border-top-left-radius: 10% 25%;
+    border-bottom-right-radius: 10% 25%;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#divWrapHasil:hover {
+    transition: 200ms ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    border: 1px solid black;
+    filter: drop-shadow(2px 3px 4px);
+}
+
+/* Style Judul Hasil BMI */
+#hasilBMI {
+    font-family: 'Courier New';
+    font-size: 1.2em;
+    font-weight: 600;
+    font-variant: normal;
+    font-style: normal;
+    text-align: center;
+    word-spacing: -3px;
+    opacity: 100%;
+    color: black;
+}
+
+/* Style Hasil Angka BMI */
+#numHasilBMI {
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-family: monospace;
+    font-size: 3.1em;
+    font-weight: 600;
+    font-variant: normal;
+    font-style: italic;
+    text-align: center;
+    opacity: 80%;
+    color: black;
+}
+
+/* Style Hasil Indikasi BMI */
+#pHasilBMI {
+    margin-bottom: 5px;
+    font-family: 'Times New Roman';
+    font-size: 1em;
+    font-weight: 500;
+    font-variant: normal;
+    font-style: normal;
+    text-align: center;
+    opacity: 90%;
+    color: black;
+}
+
+/* Style Tombol Hasil BMI */
+#buttonDownloadBMI {
+    margin-top: 18px;
+    width: 125px;
+    height: 35px;
+    background-color: beige;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#buttonDownloadBMI:hover {
+    transition: 150ms ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    background-color: black;
+    color: white;
+    opacity: 100%;
+}
+
+#pHasil00 {
+    font-family: 'Times New Roman';
+    font-size: 1em;
+    font-weight: 500;
+    font-variant: normal;
+    font-style: normal;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Style Tombol */
+#buttonEndBMI {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 14px;
+    width: 140px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-family: arial;
+    padding: 3px;
+}
+
+#buttonEndBMI:hover {
+    transition: 200ms ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    background-color: black;
+    color: white;
+    opacity: 100%;
+}
+
+/* Style Box Footer(akhir) */
+#divWrapFooter {
+    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: lightgray;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10% 25%;
+    border-bottom-right-radius: 10% 25%;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#divWrapFooter:hover {
+    transition: 200ms ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    filter: drop-shadow(2px 3px 4px
+    black);
+}
+
+/* Style Footer Header */
+#footerBMI {
+    font-family: arial;
+    font-size: 1em;
+    font-weight: 600;
+    font-variant: normal;
+    font-style: normal;
+    text-align: center;
+    padding-top: 12px;
+    opacity: 100%;
+    color: black;
+}
+
+/* Style Isi Footer Box */
+#pFooter0 {
+    margin-top: 4px;
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+    font-variant: normal;
+    font-family: 'Times New Roman';
+    color: black;
+    opacity: 85%;
+}
+
+/* Style Peletakan Tata Letak Tombol Last Footer Box */
+#buttonFooterLast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+}
+
+/* Style Tombol Footer Last */
+#buttonFLast {
+    margin-left: 15px;
+    padding: 3px;
+    width: 180px;
+    height: 30px;
+    border: 1px lightgray;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+}
+
+#buttonFLast:hover {
+    transition: 200ms ease-in-out;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+    background-color: black;
+    color: white;
+    opacity: 100%;
+}
+
+/* Style Akhir Pembuat BMI */
+#footerP00 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    font-size: 1.1em;
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    color: black;
+    background: none;
+    opacity: 90%;
+    text-align: center;
+    margin-top: -12px;
+    margin-bottom: 8px;
+    animation-name: pAnimateEnd;
+    animation-duration: 1.2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes pAnimateEnd {
+    0% {
+        opacity: 90%;
+        filter: drop-shadow(0 0 2px
+        gray);
+    }
+
+    50% {   
+        opacity: 0%;
+        filter: drop-shadow(0 0 4px
+        black);
+    }
+
+    100% {
+        opacity: 90%;
+        filter: drop-shadow(0 0 2px
+        gray);
+    }
+}
+
+#textDownloadAppFont {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-family: Arial;
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    color: black;
+    opacity: 90%;
+}
+
+/* Style Img Download App */
+#imgDownloadApp {
+    width: 310px;
+    height: 50px;  
+    margin-top: 0px; 
+    opacity: 85%;
+}
+
+#divImgDownloadApp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* Akhiran Bagian Styling BMI */

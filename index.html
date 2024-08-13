@@ -1,10 +1,12 @@
 <!-- Awalan -->
+<!-- TIPE DATA/DOKUMEN (diperlukan) -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KALKULATOR BMI</title>
+        <!-- STYLING WEB BMI -->
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -12,15 +14,15 @@
         <!-- HEADER -->
         <!-- Judul Awal Sebuah BMI Perhitungan -->
         <header id="titleOpA">
-            <hr>
+            <hr />
             <h1 id="titleHead">>> BMI <<</h1>
             <p id="pLows">[ Perhitungan Massa Index Tubuh ]</p>
-            <hr>
+            <hr />
         </header>
         <nav id="navFunction">
             <a href="#" id="aNavFirst">HOME</a>
-            <a href="#">KALKULATOR BMI</a>
-            <a href="#">HASIL BMI</a>
+            <a href="#" id="scriptKalkulator">KALKULATOR BMI</a>
+            <a href="#" id="scriptHasil">HASIL BMI</a>
             <a href="#" id="aNavEnd">KESIMPULAN</a>
             <button id="buttonDarkLightToggle">MODE CAHAYA</button>
         </nav>
@@ -31,15 +33,17 @@
         <main>
             <aside>
                 <article>
-                    <h4 style="font-weight: 600; margin-bottom: 5px;">KALKULATOR BMI</h4>
-                    <p id="pEnd">Berat badan ideal adalah impian semua orang. Tidak hanya
+                    <h4 style="font-weight: 600; margin-bottom: 5px;">KALKULATOR
+                        BMI</h4>
+                    <p id="pEnd">Berat badan ideal adalah impian semua orang.
+                        Tidak hanya
                         memiliki bentuk tubuh yang menunjang penampilan, berat
                         badan ideal juga menandakan kondisi tubuh yang sehat.
-                        Bagaimana denganmu?..<br> Yuk, hitung sekarang di
+                        Bagaimana denganmu?..<br /> Yuk, hitung sekarang di
                         kalkulator BMI.</p>
-                        <hr>
+                    <hr />
                 </article>
-                <br>
+                <br />
                 <!-- Form Sebagai Perhitungan BMI -->
                 <form>
                     <div id="formWrapRadio">
@@ -54,25 +58,36 @@
                             for="perempuan">Perempuan</label>
                     </div>
 
+                    <!-- GAMBAR BMI -->
+                    <img src="assets/BMI.png" alt="BMI IMG" id="imgBMI">
+
                     <div>
                         <h4 id="h4BMI">Berat Badan</h4>
                         <input type="number" placeholder="Kilogram<" required>
+                        <img src="assets/penIcon.png" alt="Pen Input"
+                            id="imgPenIcon">
                     </div>
 
                     <div>
                         <h4 id="h4BMI">Usia</h4>
                         <input type="number" placeholder="Tahun<" required>
+                        <img src="assets/penIcon.png" alt="Pen Input"
+                            id="imgPenIcon">
                     </div>
 
                     <div>
                         <h4 id="h4BMI">Tinggi Badan</h4>
                         <input type="number" placeholder="Centimeter<" required>
+                        <img src="assets/penIcon.png" alt="Pen Input"
+                            id="imgPenIcon">
                     </div>
 
                     <!-- Tombol Perhitungan BMI -->
                     <div>
                         <button id="buttonSubmit">Hitung BMI</button>
                         <button id="buttonRefresh">Reset</button>
+                        <img src="assets/Reloading.icon.png" alt="Reload Icon"
+                            id="imgReload0">
                     </div>
                 </form>
                 <article>
@@ -87,16 +102,20 @@
                         </tr>
                         <tr>
                             <td id="dCenter">02</td>
-                            <td id="dAnimateTable">Menentukan Kategori Berat Badan Ideal atau Tidak</td>
+                            <td id="dAnimateTable">Menentukan Kategori Berat
+                                Badan Ideal atau Tidak</td>
                         </tr>
                         <tr>
                             <td id="dCenter">03</td>
-                            <td id="dAnimateTable">Mempersiapkan Program Penurunan Berat Badan</td>
+                            <td id="dAnimateTable">Mempersiapkan Program
+                                Penurunan Berat Badan</td>
                         </tr>
                     </table>
                     <br>
-                    <h3 style="text-align: center; margin-bottom: 7px; text-decoration: underline;"><strong><i>PERHATIAN!</i></strong></h3>
-                    <p id="pEnd">Kalkulator ini hanya boleh digunakan oleh orang dewasa
+                    <h3
+                        style="text-align: center; margin-bottom: 7px; text-decoration: underline;"><strong><i>PERHATIAN!</i></strong></h3>
+                    <p id="pEnd">Kalkulator ini hanya boleh digunakan oleh orang
+                        dewasa
                         (Wanita hamil atau menyusui tidak boleh mengandalkan
                         pembacaan BMI ini) dan tidak ada tindakan yang harus
                         diambil berdasarkan nilainya selain berkonsultasi dengan
@@ -112,20 +131,52 @@
 
             <aside>
                 <section>
-                    <h3>Hasil BMI:</h3>
-                    <div>
-                        <h4>Berat Badan Berlebih</h4>
-                        <h1>24.7</h1>
-                        <p>Anda memiliki berat badan berlebih</p>
-                        <button>Download Hasil BMI</button>
+                    <h4 style="font-weight: 600; margin-bottom: 5px;">HASIL
+                        BMI:</h4>
+                    <div id="divWrapHasil">
+                        <h4 id="hasilBMI">Berat Badan Lebih</h4>
+                        <h1 id="numHasilBMI">24.7</h1>
+                        <p id="pHasilBMI">-Anda memiliki berat badan
+                            berlebih-</p>
+                        <hr />
+                        <div
+                            style="display: flex; justify-content: center; text-align: center;">
+                            <button id="buttonDownloadBMI">Download Hasil
+                                BMI</button>
+                        </div>
                     </div>
-                    <button>Konsultasi Ahli Gizi Via Aplikasi</button>
-                    <button>Registrasi Online Ahli Gizi</button>
+                    <p id="pHasil00">Hasil BMI diantara 23 dan 25</p>
+                    <p id="pEnd" >Anda berada dalam kategori overweight atau
+                        berat badan berlebih.<br /> Cara terbaik untuk
+                        menurunkan berat badan adalah dengan mengatur kalor
+                        makanan yang dikonsumsi dan berolahraga.<br /> Jika BMI
+                        Anda berada dalam kategori ini maka Anda dianjurkan
+                        untuk menurunkan berat badan hingga batas normal.</p>
+                    <button id="buttonEndBMI">Konsultasi Ahli Gizi Via Aplikasi</button>
+                    <button id="buttonEndBMI">Registrasi Online Ahli Gizi</button>
                     <br>
-                    <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari
+                    <p id="pEnd">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari
                         kesehatan tubuh dan resiko penyakit seseorang. Anda
                         perlu konsultasi lebih lanjut mengenai resiko dan
                         kekhawatiran Anda terkait dengan berat badan Anda.</p>
+                    <div id="divWrapFooter">
+                        <h4 id="footerBMI">Beberapa penyakit yang berasal dari kegemukan</h4>
+                        <p id="pFooter0">Diabetes</p>
+                        <p id="pFooter0">Hipertensi</p>
+                        <p id="pFooter0">Sakit Jantung</p>
+                        <p id="pFooter0">Osteoarthritis</p>
+                        <br />
+                        <hr />
+                        <div id="buttonFooterLast">
+                            <button id="buttonFLast">Konsultasi Dokter VIa Aplikasi</button>
+                            <button id="buttonFLast">Registrasi Online Sekarang</button>
+                        </div>
+                        <br />
+                    </div>
+                    <p id="textDownloadAppFont">--Download Aplikasi--</p>
+                    <div id="divImgDownloadApp">
+                        <img src="assets/playstoreandappstore.png" id="imgDownloadApp">
+                    </div>
                 </section>
             </aside>
         </main>
@@ -134,13 +185,13 @@
         <!-- FOOTER -->
         <!-- Bagian Bawah Daripada BMI Perhitungan (Setelah Contents) -->
         <footer>
-
+            <p id="footerP00">By <i><u>Putra SO</u></i></p>
         </footer>
         <!-- FOOTER END -->
 
         <!-- SCRIPT PERHITUNGAN BMI -->
-         <script src="script/script.js"></script>
-        <!-- SCRIPT PERHITUNGAN BMI END -->
+        <script src="script/script.js"></script>
+
     </body>
 </html>
 <!-- Akhiran -->
