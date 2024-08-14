@@ -79,6 +79,17 @@ function resetBMI(){
     
     document.getElementById("pHasil00").innerText = 'Hasil BMI diantara - dan -';
 }
+
+// Implementasi Unduhan Data BMI
+function downloadBMI() {
+    const blob = new Blob([resultAntara], {type: `text/plain`});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement(`a`);
+    a.href = url;
+    a.download = `Hasil_BMI`;
+    a.click();
+    URL.revokeObjectURL(url);
+}
 // AKHIR PERKODEAN JAVASCRIPT
 // TERIMA  KASIH KAKAK PEMBIMBING DARI REVOU YANG TELAH
 // MEMBANTU KU DALAM BERLOGIKA DI JAVASCRIPT INI, NAMUN,
