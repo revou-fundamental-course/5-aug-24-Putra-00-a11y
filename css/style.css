@@ -64,7 +64,7 @@ nav a {
     font-style: normal;
     font-variant: normal;
     text-decoration: none;
-    font-size: small;
+    font-size: 10px;
     color: white;
 }
 
@@ -335,26 +335,6 @@ input:hover {
     filter: drop-shadow(0 0 3px
     black);
     transform: rotate(350deg);
-}
-
-/* Style BMI IMG */
-#imgBMI {
-    position: relative;
-    float: right;
-    top: 25px;
-    right: 110px;
-    width: 160px;
-    height: 160px;
-    opacity: 30%;
-    border: 1px solid;
-    border-radius: 50%;
-}
-
-#imgBMI:hover {
-    transition: 200ms ease-in-out;
-    transition-delay: 0s;
-    transition-timing-function: linear;
-    opacity: 70%;
 }
 
 #h4BMI {
@@ -714,5 +694,12 @@ input[type=radio] {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Responsif Layar (HP/TABLET) */
+@media only screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
 }
 /* Akhiran Bagian Styling BMI */
